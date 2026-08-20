@@ -1025,7 +1025,7 @@ function drawCam(){
         motionCooldown=120;
     }
     motionBoxes.forEach(box=>{
-        if(box.life-->0){
+        if (box.life-- > 0) {
             const a=box.life/100;
             ctx.strokeStyle=`rgba(255,200,0,${a})`; ctx.lineWidth=1;
             ctx.strokeRect(box.x-box.w/2,box.y-box.h/2,box.w,box.h);
